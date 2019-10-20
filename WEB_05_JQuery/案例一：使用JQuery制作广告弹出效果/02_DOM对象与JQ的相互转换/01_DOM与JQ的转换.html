@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../../js/jquery-1.8.3.js"></script>
+		<script>
+			//JS的DOM操作
+			window.onload = function() {
+				document.getElementById("buttonJS").onclick = function() {
+					//document.getElementById("span").innerHTML = "超级帅呀";
+					
+					//同理：DOM对象也无法使用JQ的方法与属性
+					//document.getElementById("span").html("最帅啦！");//错误
+					
+					
+					//DOM对象向JQ对象转换
+					var spanEle=document.getElementById("span");
+					$(spanEle).html("没错，就是夏虎！！！！");
+				}
+			}
+			
+			//JQ的DOM操作
+			$(function() {
+				$("#buttonJQ").click(function(){
+					//JQ对象无法操作JS对象中的方法与属性
+					//$("#span").innerHTML="超级帅呀";//错误
+					
+					//$("#span").html("唱歌超级好听！");
+					
+					//JQ对象向DOM对象转换方式一
+					//转换完成后就可以使用对方的属性跟方法
+					//$("span").get(0).innerHTML="难受的呀皮！";
+					
+					//JQ对象向DOM对象转换方式二
+					$("span")[0].innerHTML="真滴很烦！";
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<input type="button" value="JS写入" id="buttonJS" />
+		<input type="button" value="JQ写入" id="buttonJQ" /><br /> 孝感张学友：
+		<span id="span">真滴帅！</span>
+	</body>
+
+</html>

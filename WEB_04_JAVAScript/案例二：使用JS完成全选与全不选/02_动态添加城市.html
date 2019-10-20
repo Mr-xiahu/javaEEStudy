@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload = function() {
+				//创建button单击事件
+				document.getElementById("button").onclick = function() {
+					//获取元素位置
+					var ulEle = document.getElementById("ul");
+					//创建一个文本节点
+					var textNode = document.createTextNode("武汉");
+					//创建一个元素节点
+					var elementNode = document.createElement("li");
+					//将文本节点添加到元素节点中
+					elementNode.appendChild(textNode);
+					//将元素节点添加到父节点中
+					ulEle.appendChild(elementNode);
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<input type="button" value="添加" id="button" />
+
+		<ul id="ul">
+			<li>北京</li>
+			<li>上海</li>
+			<li>广州</li>
+		</ul>
+	</body>
+
+</html>

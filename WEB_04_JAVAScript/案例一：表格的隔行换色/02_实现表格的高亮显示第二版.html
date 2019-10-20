@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//			function changeColor() {
+			//				document.getElementById("one").style.backgroundColor = "red";
+			//			}
+			//			
+			//			function backColor(){
+			//				document.getElementById("one").style.backgroundColor = "white";
+			//			}
+			
+			//代码改进
+			function changeColor(id){
+				document.getElementById(id).style.backgroundColor = "red";
+			}
+			
+			function backColor(id){
+				document.getElementById(id).style.backgroundColor = "white";
+			}
+			
+		</script>
+	</head>
+
+	<body>
+		<table border="1px" cellpadding="0px" cellspacing="0px" align="center" width="500px" height="100px">
+			<thead>
+				<tr>
+					<th>编号</th>
+					<th>姓名</th>
+					<th>年龄</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr id="one" onmouseover="changeColor('one')" onmouseout="backColor('one')">
+
+					<td>1</td>
+					<td>张三</td>
+					<td>18</td>
+				</tr>
+				<tr id="two" onmouseover="changeColor('two')" onmouseout="backColor('two')">
+					<td>2</td>
+					<td>李思</td>
+					<td>20</td>
+				</tr>
+				<tr id="three" onmouseover="changeColor('three')" onmouseout="backColor('three')">
+					<td>3</td>
+					<td>王五</td>
+					<td>30</td>
+				</tr>
+				<tr id="four" onmouseover="changeColor('four')" onmouseout="backColor('four')">
+					<td>4</td>
+					<td>赵六</td>
+					<td>26</td>
+				</tr>
+				<tr id="five" onmouseover="changeColor('five')" onmouseout="backColor('five')">
+					<td>5</td>
+					<td>夏虎</td>
+					<td>20</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+
+</html>

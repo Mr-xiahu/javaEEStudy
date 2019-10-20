@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>JQ对象的获取</title>
+		<script type="text/javascript" src="../../js/jquery-1.8.3.js"></script>
+		<script>
+			$(function() {
+//				//1.JS方式获取
+//				document.getElementById("button").onclick = function() {
+//					location.href = "惊喜.html";
+//				}
+				
+				//document.getElementById("button")=============>$("#button")
+				
+				//2.JQ方式获取
+				$("#button").click(function() {
+					location.href = "惊喜.html";
+				});
+				
+				$(".img").click(function(){
+					confirm("你喜欢林青霞嘛？");
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<input type="button" value="你点我一下试试!" id="button" />
+		<img src="../../img/林青霞.jpg" class="img" />
+	</body>
+
+</html>

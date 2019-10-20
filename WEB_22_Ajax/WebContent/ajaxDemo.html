@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//异步请求
+	function fn1() {
+		//Ajax的创建过程
+		//1.创建Ajax引擎
+		var ajax = new XMLHttpRequest();
+
+		//2.绑定监听 ---- 监听服务器是否已经返回相应数据
+		ajax.onreadystatechange = function() {
+			if (ajax.readyState == 4 && ajax.status == 200) {
+				//5、接受相应数据
+				var res = ajax.responseText;
+				document.getElementById("span1").innerHTML = res;
+			}
+		}
+
+		//3.绑定地址
+		ajax.open("GET", "/WEB_22_Ajax/ajaxServlet?name=xiahu", true);
+
+		//4.发送请求
+		ajax.send();
+	}
+</script>
+<script type="text/javascript">
+	//同步请求
+	function fn2() {
+		//Ajax的创建过程
+		//1.创建Ajax引擎
+		var ajax = new XMLHttpRequest();
+
+		//2.绑定监听 ---- 监听服务器是否已经返回相应数据
+		ajax.onreadystatechange = function() {
+			if (ajax.readyState == 4 && ajax.status == 200) {
+				//5、接受相应数据
+				var res = ajax.responseText;
+				document.getElementById("span2").innerHTML = res;
+			}
+		}
+
+		//3.绑定地址
+		ajax.open("POST", "/WEB_22_Ajax/ajaxServlet", false);
+
+		//4.发送请求
+		ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		ajax.send("name=yangming");
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="异步请求" onclick="fn1()">
+	<span id="span1"></span>
+	<br>
+	<input type="button" value="同步请求" onclick="fn2()">
+	<span id="span2"></span>
+	<br>
+</body>
+</html>

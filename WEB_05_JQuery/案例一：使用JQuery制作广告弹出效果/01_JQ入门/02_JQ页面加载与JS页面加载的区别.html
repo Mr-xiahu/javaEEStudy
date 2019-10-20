@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JQ页面加载与JS页面加载的区别</title>
+		<script type="text/javascript" src="../../js/jquery-1.8.3.js" ></script>
+		<script>
+			window.onload=function(){
+				alert("张三");
+			}
+			
+			//JS页面加载会被覆盖(传统的页面加载方式会存在覆盖问题),加载比JQ慢(等待整个页面,包括页面中的文档,图片,文本等)
+			window.onload=function(){
+				alert("李四");
+			}
+			
+			//第一版JQ的页面加载写法
+			//JQ加载比传统的页面加载快(JQ加载是在整个DOM树绘制完毕后加载,不会等待整个页面加载完成才加载)
+			jQuery(document).ready(function(){
+				alert("王五");
+			});
+			
+			//第二版JQ的页面加载写法
+			$(document).ready(function(){
+				alert("赵六");
+			});
+			
+			//最终版JQ的页面加载写法
+			$(function(){
+				alert("吓唬");
+			});
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

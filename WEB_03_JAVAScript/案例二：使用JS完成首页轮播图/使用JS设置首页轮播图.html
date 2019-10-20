@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<style type="text/css">
+			#father {
+				border: 0px solid red;
+				width: 1300px;
+				height: 2260px;
+				margin: auto;
+			}
+			
+			#logo {
+				border: 0px solid green;
+				width: 1300px;
+				height: 50px;
+			}
+			
+			.top {
+				border: 0px solid black;
+				width: 431px;
+				height: 50px;
+				float: left;
+			}
+			
+			#top {
+				padding-top: 12px;
+				height: 38px;
+			}
+			
+			#dhl {
+				border: 0px solid red;
+				width: 1300px;
+				height: 50px;
+				background-color: black;
+			}
+			
+			#menu {
+				border: 0px solid red;
+				width: 1300px;
+				height: 50px;
+				background-color: black;
+			}
+			
+			ul li {
+				display: inline;
+				color: white;
+			}
+			
+			#product {
+				border: 0px solid red;
+				width: 1300px;
+				height: 600px;
+			}
+			
+			#product_top {
+				border: 0px solid black;
+				width: 1300px;
+				height: 45px;
+				padding-top: 8px;
+			}
+			
+			#product_botton {
+				border: 0px solid black;
+				width: 1300px;
+				height: 545px;
+			}
+			
+			#product_botton_left {
+				border: 0px solid blue;
+				width: 210px;
+				height: 545px;
+				float: left;
+			}
+			
+			#product_botton_right {
+				border: 0px solid red;
+				width: 1086px;
+				height: 545px;
+				float: left;
+			}
+			
+			#product_botton_right_big {
+				border: 0px solid blue;
+				width: 541px;
+				height: 270px;
+				float: left;
+			}
+			
+			.product_botton_right_big_small {
+				border: 0px solid black;
+				width: 179px;
+				height: 270px;
+				float: left;
+				text-align: center;
+			}
+			
+			#bottom {
+				border: 0px solid red;
+				width: 1300px;
+				height: 70px;
+				text-align: center;
+				font-size: 20px;
+				padding-bottom: 5px;
+			}
+		</style>
+		<script>
+			/**
+			 * 步骤:
+			 *   1.确定事件(OnLoad)，并为其绑定函数
+			 *   2.书写绑定的函数
+			 *   3.书写定时任务(setInterval())
+			 *   4.书写定时任务的函数
+			 */
+			//1.为事件绑定函数
+			function init() {
+				//设置定时任务函数
+				setInterval("changeImage()", 3000);
+			}
+			//定义一个变量i
+			var i = 1;
+			//书写定时任务函数
+			function changeImage() {
+				i++;
+				document.getElementById("img1").src = "../img/" + i + ".jpg";
+				//添加一个条件
+				if (i == 3) {
+					i = 0;
+				}
+			}
+		</script>
+	</head>
+
+	<body onload="init()">
+		<div id="father">
+			<!--1.logo部分-->
+			<div id="logo">
+				<div class="top">
+					<img src="../img/logo2.png" height="46px" />
+				</div>
+				<div class="top">
+					<img src="../img/header.png" height="46px" />
+				</div>
+				<div class="top" id="top">
+					<a href="#">登录</a>
+					<a href="#">注册</a>
+					<a href="#">购物车</a>
+				</div>
+			</div>
+			<!--2.导航栏-->
+			<div id="menu">
+				<ul>
+					<a href="#">
+						<li style="font-size: 20px;">首页</li>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<li>手机数码</li>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<li>家用电器</li>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<li>鞋靴箱包</li>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<li>孕婴保健</li>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<li>奢饰品</li>
+					</a>
+				</ul>
+			</div>
+			<!--3.轮播图-->
+			<div id="">
+				<img src="../img/1.jpg" width="100%" id="img1" />
+			</div>
+			<!--4.最新商品-->
+			<div id="product">
+				<div id="product_top">
+					&nbsp;&nbsp;&nbsp;
+					<span style="font-size: 26px;">最新商品</span>&nbsp;&nbsp;&nbsp;
+					<img src="../img/title2.jpg" />
+				</div>
+				<div id="product_botton">
+					<div id="product_botton_left">
+						<img src="../img/big01.jpg" width="100%" height="100%" />
+					</div>
+					<div id="product_botton_right">
+						<div id="product_botton_right_big">
+							<img src="../img/middle01.jpg" width="100%" height="100%" />
+
+						</div>
+						<div class="product_botton_right_big_small">
+							<a href="#">
+								<img src="../img/small03.jpg" /><br /><br />
+							</a>
+							<a href="#" style="font-size: 20px; color: #008000;">电炖锅</a><br /><br />
+							<a href="#" style="font-size: 20px; color: #008000;">￥299</a>
+						</div>
+						<div class="product_botton_right_big_small">
+							<a href="#">
+								<img src="../img/small03.jpg" /><br /><br />
+							</a>
+							<a href="#" style="font-size: 20px; color: #008000;">电炖锅</a><br /><br />
+							<a href="#" style="font-size: 20px; color: #008000;">￥299</a>
+						</div>
+						<div class="product_botton_right_big_small">
+							<a href="#">
+								<img src="../img/small03.jpg" /><br /><br />
+							</a>
+							<a href="#" style="font-size: 20px; color: #008000;">电炖锅</a><br /><br />
+							<a href="#" style="font-size: 20px; color: #008000;">￥299</a>
+						</div>
+						<div class="product_botton_right_big_small">
+							<a href="#">
+								<img src="../img/small03.jpg" /><br /><br />
+							</a>
+							<a href="#" style="font-size: 20px; color: #008000;">电炖锅</a><br /><br />
+							<a href="#" style="font-size: 20px; color: #008000;">￥299</a>
+						</div>
+						<div class="product_botton_right_big_small">
+							<a href="#">
+								<img src="../img/small03.jpg" /><br /><br />
+							</a>
+							<a href="#" style="font-size: 20px; color: #008000;">电炖锅</a><br /><br />
+							<a href="#" style="font-size: 20px; color: #008000;">￥299</a>
+						</div>
+						<div class="product_botton_right_big_small">
+							<a href="#">
+								<img src="../img/small03.jpg" /><br /><br />
+							</a>
+							<a href="#" style="font-size: 20px; color: #008000;">电炖锅</a><br /><br />
+							<a href="#" style="font-size: 20px; color: #008000;">￥299</a>
+						</div>
+						<div class="product_botton_right_big_small">
+							<a href="#">
+								<img src="../img/small03.jpg" /><br /><br />
+							</a>
+							<a href="#" style="font-size: 20px; color: #008000;">电炖锅</a><br /><br />
+							<a href="#" style="font-size: 20px; color: #008000;">￥299</a>
+						</div>
+						<div class="product_botton_right_big_small">
+							<a href="#">
+								<img src="../img/small03.jpg" /><br /><br />
+							</a>
+							<a href="#" style="font-size: 20px; color: #008000;">电炖锅</a><br /><br />
+							<a href="#" style="font-size: 20px; color: #008000;">￥299</a>
+						</div>
+						<div class="product_botton_right_big_small">
+							<a href="#">
+								<img src="../img/small03.jpg" /><br /><br />
+							</a>
+							<a href="#" style="font-size: 20px; color: #008000;">电炖锅</a><br /><br />
+							<a href="#" style="font-size: 20px; color: #008000;">￥299</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--5.广告-->
+			<div id="">
+				<img src="../img/ad.jpg" width="100%" height="100%" />
+			</div>
+			<!--6.热门商品-->
+			<div id="product">
+				<div id="product_top">
+					&nbsp;&nbsp;&nbsp;
+					<span style="font-size: 26px;">热门商品</span>&nbsp;&nbsp;&nbsp;
+					<img src="../img/title2.jpg" />
+				</div>
+				<div id="product_botton">
+					<div id="product_botton_left">
+						<img src="../img/big01.jpg" width="100%" height="100%" />
+					</div>
+					<div id="product_botton_right">
+						<div id="product_botton_right_big">
+							<img src="../img/middle01.jpg" width="100%" height="100%" />
+						</div>
+						<div class="product_botton_right_big_small">
+							<a href="#">
+								<img src="../img/small03.jpg" /><br /><br />
+							</a>
+							<a href="#" style="font-size: 20px; color: black;">电炖锅</a><br /><br />
+							<a href="#" style="font-size: 20px; color: black;">￥399</a>
+						</div>
+						<div class="product_botton_right_big_small">
+							<a href="#">
+								<img src="../img/small03.jpg" /><br /><br />
+							</a>
+							<a href="#" style="font-size: 20px; color: black;">电炖锅</a><br /><br />
+							<a href="#" style="font-size: 20px; color: black;">￥399</a>
+						</div>
+						<div class="product_botton_right_big_small">
+							<a href="#">
+								<img src="../img/small03.jpg" /><br /><br />
+							</a>
+							<a href="#" style="font-size: 20px; color: black;">电炖锅</a><br /><br />
+							<a href="#" style="font-size: 20px; color: black;">￥399</a>
+						</div>
+						<div class="product_botton_right_big_small">
+							<a href="#">
+								<img src="../img/small03.jpg" /><br /><br />
+							</a>
+							<a href="#" style="font-size: 20px; color: black;">电炖锅</a><br /><br />
+							<a href="#" style="font-size: 20px; color: black;">￥399</a>
+						</div>
+						<div class="product_botton_right_big_small">
+							<a href="#">
+								<img src="../img/small03.jpg" /><br /><br />
+							</a>
+							<a href="#" style="font-size: 20px; color: black;">电炖锅</a><br /><br />
+							<a href="#" style="font-size: 20px; color: black;">￥399</a>
+						</div>
+						<div class="product_botton_right_big_small">
+							<a href="#">
+								<img src="../img/small03.jpg" /><br /><br />
+							</a>
+							<a href="#" style="font-size: 20px; color: black;">电炖锅</a><br /><br />
+							<a href="#" style="font-size: 20px; color: black;">￥399</a>
+						</div>
+						<div class="product_botton_right_big_small">
+							<a href="#">
+								<img src="../img/small03.jpg" /><br /><br />
+							</a>
+							<a href="#" style="font-size: 20px; color: black;">电炖锅</a><br /><br />
+							<a href="#" style="font-size: 20px; color: black;">￥399</a>
+						</div>
+						<div class="product_botton_right_big_small">
+							<a href="#">
+								<img src="../img/small03.jpg" /><br /><br />
+							</a>
+							<a href="#" style="font-size: 20px; color: black;">电炖锅</a><br /><br />
+							<a href="#" style="font-size: 20px; color: black;">￥399</a>
+						</div>
+						<div class="product_botton_right_big_small">
+							<a href="#">
+								<img src="../img/small03.jpg" /><br /><br />
+							</a>
+							<a href="#" style="font-size: 20px; color: black;">电炖锅</a><br /><br />
+							<a href="#" style="font-size: 20px; color: black;">￥399</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--7.帮助-->
+			<div id="">
+				<img src="../img/footer.jpg" width="100%" height="100%" />
+			</div>
+			<!--8.友情链接-->
+			<div id="bottom">
+
+				<a href="#">关于我们</a>
+				<a href="#">联系我们</a>
+				<a href="#">招贤纳士</a>
+				<a href="#">法律声明</a>
+				<a href="#">友情链接</a>
+				<a href="#">支付方式></a>
+				<a href="#">配送方式</a>
+				<a href="#">服务声明</a>
+				<a href="#">广告声明</a>
+				<br />
+				<span>Copyright © 2005-2016 传智商城 版权所有</span>
+
+			</div>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登录界面</title>
+		<style type="text/css">
+			#father {
+				border: 0px solid black;
+				width: 1300px;
+				height: 847px;
+				margin: auto;
+				padding: 0px;
+			}
+			
+			#top {
+				border: 0px solid red;
+				width: 1300px;
+				height: 50px;
+			}
+			
+			.top {
+				border: 0px solid blue;
+				width: 431px;
+				height: 50px;
+				float: left;
+			}
+			
+			#login {
+				padding-top: 12px;
+				height: 38px;
+			}
+			
+			#menu {
+				border: 0px solid black;
+				width: 1300px;
+				height: 50px;
+				background-color: #000000;
+			}
+			
+			ul li {
+				display: inline;
+				color: white;
+				text-align: center;
+			}
+			
+			#main {
+				border: 0px solid red;
+				width: 1300px;
+				height: 600px;
+				background-image: url(../img/regist_bg.jpg);
+				position: relative;
+			}
+			
+			#regist {
+				margin: auto;
+				border: 0px solid black;
+				width: 800px;
+				height: 500px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+			
+			.xiahu {
+				border: 0px solid blue;
+				width: 798px;
+				height: 48px;
+				background-color: white;
+			}
+			
+			#name {
+				height: 48px;
+				line-height: 48px;
+				font-size: 25px;
+			}
+			
+			.xiahu_left {
+				border: 0px solid red;
+				width: 150px;
+				height: 48px;
+				float: left;
+				line-height: 48px;
+				text-align: right;
+				font-size: 20px;
+			}
+			
+			.xiahu_right {
+				border: 0px solid black;
+				width: 644px;
+				height: 48px;
+				line-height: 48px;
+				text-align: left;
+				float: left;
+			}
+			#bottom{
+				border: 0px solid red;
+				width: 1300px;
+				height: 60px;
+				text-align: center;
+				font-size: 20px;
+				font-family: "楷体";
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="father">
+			<!--1.logo栏-->
+			<div id="top">
+				<div class="top">
+					<img src="../img/logo2.png" height="48px" />
+				</div>
+				<div class="top">
+					<img src="../img/header.png" height="48px" />
+				</div>
+				<div class="top" id="login">
+					<a href="#" style="color:  black;">登录</a>
+					<a href="#" style="color:  black;">注册</a>
+					<a href="#" style="color:  black;">购物车</a>
+				</div>
+			</div>
+			<!--2.导航栏-->
+			<div id="menu">
+				<ul>
+					<a href="#">
+						<li style="font-size: 20px;">首页</li>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<li>手机数码</li>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<li>家用电器</li>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<li>鞋靴箱包</li>
+					</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="#">
+						<li>孕婴保健</li>
+					</a>
+				</ul>
+			</div>
+			<!--3.登录界面-->
+			<form>
+				<div id="main">
+					<div id="regist">
+						<div class="xiahu">
+							&nbsp;&nbsp;&nbsp;
+							<span id="name">注册会员&nbsp;&nbsp;&nbsp;&nbsp;</span>USER REGISTER
+						</div>
+						<div class="xiahu">
+							<div class="xiahu_left">
+								<span>用户名：</span>
+							</div>
+							<div class="xiahu_right">
+								<input type="text" name="username" placeholder="请输入用户名" size="25" />
+							</div>
+						</div>
+						<div class="xiahu">
+							<div class="xiahu_left">
+								<span>密码：</span>
+							</div>
+							<div class="xiahu_right">
+								<input type="password" name="password" placeholder="请输入密码" size="25" />
+							</div>
+						</div>
+						<div class="xiahu">
+							<div class="xiahu_left">
+								<span>确定密码：</span>
+							</div>
+							<div class="xiahu_right">
+								<input type="password" name="repassword" placeholder="请再次输入密码" size="25" />
+							</div>
+						</div>
+						<div class="xiahu">
+							<div class="xiahu_left">
+								<span>E-mail：</span>
+							</div>
+							<div class="xiahu_right">
+								<input type="text" name="email" placeholder="请输入正确的邮箱" size="25" />
+							</div>
+						</div>
+						<div class="xiahu">
+							<div class="xiahu_left">
+								<span>姓名：</span>
+							</div>
+							<div class="xiahu_right">
+								<input type="text" name="name" placeholder="请输入你的姓名" size="25" />
+							</div>
+						</div>
+						<div class="xiahu">
+							<div class="xiahu_left">
+								<span>性别：</span>
+							</div>
+							<div class="xiahu_right">
+								<input type="radio" name="sex" checked="checked" value="男" />男
+								<input type="radio" name="sex" value="女" />女
+							</div>
+						</div>
+						<div class="xiahu">
+							<div class="xiahu_left">
+								<span>出生年月：</span>
+							</div>
+							<div class="xiahu_right">
+								<input type="date" name="birtherday" placeholder="请输入你的出生年月日" />
+							</div>
+						</div>
+						<div class="xiahu">
+							<div class="xiahu_left">
+								<span>验证码：</span>
+							</div>
+							<div class="xiahu_right">
+								<input type="text" name="yanzhengma" placeholder="请输入正确的验证码" />
+								<img src="../img/yanzhengma.png" />
+							</div>
+						</div>
+						<div class="xiahu">
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="submit" value="注册" size="20" />
+						</div>
+					</div>
+				</div>
+			</form>
+			<!--4.广告界面-->
+			<div id="">
+                <img src="../img/footer.jpg" width="100%" />
+			</div>
+			<!--5.友情链接-->
+			<div id="bottom">
+                <a href="#"><span>关于我们</span></a>
+                <a href="#"><span>联系我们</span></a>
+                <a href="#"><span>招贤纳士</span></a>
+                <a href="#"><span>法律声明</span></a>
+                <a href="#"><span>友情链接</span></a>
+                <a href="#"><span>支付方式</span></a>
+                <a href="#"><span>配送方式</span></a>
+                <a href="#"><span>服务声明</span></a>
+                <a href="#"><span>广告声明</span></a>
+                <br />
+                <span>Copyright © 2005-2016 传智商城 版权所有</span>
+                
+			</div>
+		</div>
+	</body>
+         
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <a href="/WEB_15_Request/referer">请点击我一下试试，我就跳转到headerServlet</a>
+    
+    
+	<form action="/WEB_15_Request/line" method="get">
+		用户名:<input type="text" name="username"><br /> 
+		密码:<input type="password" name="password"><br /> 
+		<input type="submit" value="提交"><br />
+	</form>
+	<hr>
+	
+	<form action="/WEB_15_Request/body" method="post">
+		用户名:<input type="text" name="username"><br /> 
+		密码:<input type="password" name="password"><br /> 
+		<input type="checkbox" name="hobby" value="read">读书
+		<input type="checkbox" name="hobby" value="watch">看报
+		<input type="checkbox" name="hobby" value="listen">听音乐<br/>
+		<input type="submit" value="提交"><br />
+	</form>
+</body>
+</html>

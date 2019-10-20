@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function checkAll() {
+				//获取全选复选框的位置
+				var checkAllEle = document.getElementById("checkAll");
+				//获取全选复选框的状态
+				var falg = checkAllEle.checked;
+				//对全选复选框的状态的状态进行判断
+				if (falg == true) {
+					//获取所有的小的复选框
+					var checkOne = document.getElementsByName("select");
+					//多所有的小的复选框进行遍历
+					for (var i = 0; i < checkOne.length; i++) {
+						//更改状态
+						checkOne[i].checked = true;
+					}
+				} else {
+					//获取所有的小的复选框
+					var checkOne = document.getElementsByName("select");
+					//多所有的小的复选框进行遍历
+					for (var i = 0; i < checkOne.length; i++) {
+						//更改状态
+						checkOne[i].checked = false;
+					}
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<table border="1px" width="600px" height="300px" align="center">
+			<thead>
+				<tr height="35px">
+					<td colspan="4 ">
+						<input type="button" value="添加" />
+						<input type="button" value="删除" />
+					</td>
+				</tr>
+				<tr height="30px">
+					<th width="50px">
+						<input type="checkbox" id="checkAll" onclick="checkAll()" />
+					</th>
+					<th>编号</th>
+					<th>姓名</th>
+					<th>年龄</th>
+				</tr>
+			</thead>
+			<tr>
+				<td width="50px" align="center">
+					<input type="checkbox" name="select" />
+				</td>
+				<td>01</td>
+				<td>张三</td>
+				<td>13</td>
+			</tr>
+			<tr>
+				<td width="50px" align="center">
+					<input type="checkbox" name="select" />
+				</td>
+				<td>02</td>
+				<td>李思</td>
+				<td>19</td>
+			</tr>
+			<tr>
+				<td width="50px" align="center">
+					<input type="checkbox" name="select" />
+				</td>
+				<td>03</td>
+				<td>王五</td>
+				<td>20</td>
+			</tr>
+			<tr>
+				<td width="50px" align="center">
+					<input type="checkbox" name="select" />
+				</td>
+				<td>04</td>
+				<td>赵六</td>
+				<td>36</td>
+			</tr>
+			<tr>
+				<td width="50px" align="center">
+					<input type="checkbox" name="select" />
+				</td>
+				<td>05</td>
+				<td>阿三</td>
+				<td>45</td>
+			</tr>
+			<tr>
+				<td width="50px" align="center">
+					<input type="checkbox" name="select" />
+				</td>
+				<td>06</td>
+				<td>傻大个</td>
+				<td>25</td>
+			</tr>
+			<tr>
+				<td width="50px" align="center">
+					<input type="checkbox" name="select" />
+				</td>
+				<td>07</td>
+				<td>二傻子</td>
+				<td>25</td>
+			</tr>
+
+		</table>
+	</body>
+
+</html>

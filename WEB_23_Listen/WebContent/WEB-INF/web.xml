@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>WEB_23_Listen</display-name>
+  <listener>
+    <listener-class>com.xiahu.birthday.BirthdayListener</listener-class>
+  </listener>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>TestMyServletContextAttributeListener</display-name>
+    <servlet-name>TestMyServletContextAttributeListener</servlet-name>
+    <servlet-class>com.xiahu.Test.TestMyServletContextAttributeListener</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestMyServletContextAttributeListener</servlet-name>
+    <url-pattern>/Test1</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>MyHTTPSessionAttributeLietener</display-name>
+    <servlet-name>MyHTTPSessionAttributeLietener</servlet-name>
+    <servlet-class>com.xiahu.Test.MyHTTPSessionAttributeLietener</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyHTTPSessionAttributeLietener</servlet-name>
+    <url-pattern>/test2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TestMyHTTPSessionAttributeLietenerServlet</display-name>
+    <servlet-name>TestMyHTTPSessionAttributeLietenerServlet</servlet-name>
+    <servlet-class>com.xiahu.Test.TestMyHTTPSessionAttributeLietenerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestMyHTTPSessionAttributeLietenerServlet</servlet-name>
+    <url-pattern>/test</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TestHttpSessionBindingListener</display-name>
+    <servlet-name>TestHttpSessionBindingListener</servlet-name>
+    <servlet-class>com.xiahu.Test.TestHttpSessionBindingListener</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestHttpSessionBindingListener</servlet-name>
+    <url-pattern>/testBinding</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TestHttpSessionActivationListenerServlet1</display-name>
+    <servlet-name>TestHttpSessionActivationListenerServlet1</servlet-name>
+    <servlet-class>com.xiahu.Test.TestHttpSessionActivationListenerServlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestHttpSessionActivationListenerServlet1</servlet-name>
+    <url-pattern>/testActive1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TestHttpSessionActivationListenerServlet2</display-name>
+    <servlet-name>TestHttpSessionActivationListenerServlet2</servlet-name>
+    <servlet-class>com.xiahu.Test.TestHttpSessionActivationListenerServlet2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestHttpSessionActivationListenerServlet2</servlet-name>
+    <url-pattern>/testActive2</url-pattern>
+  </servlet-mapping>
+  
+  <listener>
+    <listener-class>com.xiahu.birthday.BirthdayListener</listener-class>
+  </listener>
+</web-app>
